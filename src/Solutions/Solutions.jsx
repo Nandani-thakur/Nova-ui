@@ -4,9 +4,9 @@ import React from 'react';
 import '../styles/Solutions.css';
 import vector1 from '../assets/Vector1.png'
 import vector2 from '../assets/Vector2.png'
-import vector3 from '../assets/Vector3.png'
-import vector4 from '../assets/Vector4.png'
-import vector5 from '../assets/Vector5.png'
+import vector3 from '../assets/vector3.png'
+import vector4 from '../assets/vector4.png'
+import vector5 from '../assets/vector5.png'
 
 
 
