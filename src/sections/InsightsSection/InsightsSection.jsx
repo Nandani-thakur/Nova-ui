@@ -1,5 +1,5 @@
 import "../../styles/InsightsSection.css";
-import LOGO from "../../assets/Frame54.png"
+import LOGO_ from "../../assets/Frame54.png"
 const articles = [
   {
     id: 1,
@@ -33,7 +33,7 @@ function FeaturedCard({ article }) {
   return (
     <div className="featured-card">
       <div className="featured-image-wrapper">
-        <img src={LOGO} />
+        <img src={LOGO_} />
       </div>
       <div className="featured-content">
         <span className="category">{article.category}</span>
