@@ -1,0 +1,403 @@
+/* ============================================================
+   CoreBankingFeatures.css — Original + Full Responsive
+   ============================================================ */
+
+.cbf {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #07101a;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 60px 80px 60px 0;
+}
+
+.cbf img {
+  width: 651px;
+  height: 461px;
+}
+
+/* ============================================================
+   LEFT — Device that bleeds off the left edge
+   ============================================================ */
+.cbf__device-outer {
+  position: absolute;
+  left: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.cbf__device-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  transform: perspective(1400px) rotateY(7deg) rotateX(2deg) translateY(10px);
+  transform-origin: left center;
+  filter: drop-shadow(20px 30px 60px rgba(0, 0, 0, 0.85));
+}
+
+.cbf__screen {
+  width: 560px;
+  border: 2px solid #1e6fbf;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  background: #e8ecf0;
+  box-shadow:
+    0 0 0 1px rgba(30, 111, 191, 0.45),
+    inset 0 0 16px rgba(0, 0, 0, 0.08);
+}
+
+.cbf__chin {
+  width: 560px;
+  height: 18px;
+  background: linear-gradient(180deg, #155ba0 0%, #0b3a6e 100%);
+  border: 2px solid #1e6fbf;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  box-shadow:
+    0 0 0 1px rgba(30, 111, 191, 0.35),
+    0 12px 28px rgba(0, 0, 0, 0.55);
+}
+
+/* ============================================================
+   RIGHT — Text content
+   ============================================================ */
+.cbf__content {
+  position: relative;
+  z-index: 2;
+  margin-left: 150px;
+  max-width: 590px;
+  height: 390px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cbf__heading {
+  font-size: 1.85rem;
+  font-weight: 600;
+  color: #dde6ec;
+  line-height: 1.3;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.cbf__label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #dde6ec;
+  margin: 0;
+}
+
+/* Two-column feature grid */
+.cbf__features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 40px;
+  align-items: start;
+}
+
+.cbf__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cbf__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: #c0d0db;
+  line-height: 1.55;
+}
+
+.cbf__check-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+}
+
+/* =====================================================
+   RESPONSIVE BREAKPOINTS
+   ===================================================== */
+
+/* ── Large Desktop: 1440px+ ── */
+@media (min-width: 1440px) {
+  .cbf {
+    padding: 60px 100px 60px 0;
+  }
+
+  .cbf__content {
+    margin-left: 200px;
+    max-width: 660px;
+  }
+
+  .cbf__heading {
+    font-size: 2.1rem;
+  }
+
+  .cbf__device-outer {
+    left: -40px;
+  }
+
+  .cbf__screen,
+  .cbf__chin {
+    width: 620px;
+  }
+}
+
+/* ── Laptop: 1280px ── */
+@media (max-width: 1280px) {
+  .cbf {
+    padding: 60px 60px 60px 0;
+  }
+
+  .cbf__content {
+    margin-left: 120px;
+    max-width: 520px;
+  }
+
+  .cbf__screen,
+  .cbf__chin {
+    width: 500px;
+  }
+
+  .cbf__heading {
+    font-size: 1.65rem;
+  }
+}
+
+/* ── Tablet Landscape: 1024px – 1200px ── */
+@media (max-width: 1200px) {
+  .cbf {
+    padding: 60px 40px 400px 0;
+    align-items: flex-end;
+  }
+
+  .cbf__device-outer {
+    top: auto;
+    bottom: 60px;
+    transform: none;
+    left: -40px;
+  }
+
+  .cbf__device-wrap {
+    transform: perspective(900px) rotateY(4deg) rotateX(1deg);
+  }
+
+  .cbf__content {
+    margin-left: 40px;
+    height: auto;
+    max-width: 100%;
+    padding-right: 20px;
+  }
+
+  .cbf__screen,
+  .cbf__chin {
+    width: 440px;
+  }
+
+  .cbf__heading {
+    font-size: 1.55rem;
+  }
+}
+
+/* ── Tablet Portrait: 768px – 1024px ── */
+@media (max-width: 1024px) {
+  .cbf {
+    padding: 60px 32px 380px 0;
+  }
+
+  .cbf__device-outer {
+    left: -30px;
+    bottom: 40px;
+  }
+
+  .cbf__screen,
+  .cbf__chin {
+    width: 400px;
+  }
+
+  .cbf__content {
+    margin-left: 32px;
+  }
+
+  .cbf__heading {
+    font-size: 1.45rem;
+  }
+
+  .cbf__item {
+    font-size: 0.84rem;
+  }
+
+  .cbf__features-grid {
+    gap: 0 28px;
+  }
+}
+
+/* ── Mobile Large: 576px – 800px ── */
+@media (max-width: 800px) {
+  .cbf {
+    flex-direction: column;
+    padding: 300px 24px 40px 24px;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+
+  .cbf__device-outer {
+    top: 20px;
+    bottom: auto;
+    left: -30px;
+    transform: none;
+  }
+
+  .cbf__device-wrap {
+    transform: none;
+  }
+
+  .cbf__screen,
+  .cbf__chin {
+    width: 320px;
+  }
+
+  .cbf__content {
+    margin-left: 0;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .cbf__features-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .cbf__list {
+    gap: 14px;
+  }
+
+  .cbf__heading {
+    font-size: 1.4rem;
+  }
+
+  .cbf__label {
+    font-size: 0.85rem;
+  }
+
+  .cbf__item {
+    font-size: 0.84rem;
+  }
+}
+
+/* ── Mobile: 576px ── */
+@media (max-width: 576px) {
+  .cbf {
+    padding: 260px 20px 36px 20px;
+  }
+
+  .cbf__device-outer {
+    left: -20px;
+    top: 16px;
+  }
+
+  .cbf__screen,
+  .cbf__chin {
+    width: 280px;
+  }
+
+  .cbf__heading {
+    font-size: 1.25rem;
+  }
+
+  .cbf__item {
+    font-size: 0.8rem;
+    gap: 10px;
+  }
+
+  .cbf__check-icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  .cbf__list {
+    gap: 12px;
+  }
+
+  .cbf img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ── Mobile Small: 480px ── */
+@media (max-width: 480px) {
+  .cbf {
+    padding: 230px 16px 32px 16px;
+  }
+
+  .cbf__device-outer {
+    left: -16px;
+    top: 12px;
+  }
+
+  .cbf__screen,
+  .cbf__chin {
+    width: 250px;
+  }
+
+  .cbf__chin {
+    height: 14px;
+  }
+
+  .cbf__heading {
+    font-size: 1.15rem;
+    line-height: 1.25;
+  }
+
+  .cbf__label {
+    font-size: 0.8rem;
+  }
+
+  .cbf__item {
+    font-size: 0.76rem;
+    line-height: 1.5;
+  }
+
+  .cbf__features-grid {
+    gap: 16px 0;
+  }
+}
+
+/* ── Very Small: below 360px ── */
+@media (max-width: 360px) {
+  .cbf {
+    padding: 200px 12px 28px 12px;
+  }
+
+  .cbf__screen,
+  .cbf__chin {
+    width: 220px;
+  }
+
+  .cbf__heading {
+    font-size: 1.05rem;
+  }
+
+  .cbf__item {
+    font-size: 0.72rem;
+  }
+
+  .cbf__check-icon {
+    width: 15px;
+    height: 15px;
+  }
+}

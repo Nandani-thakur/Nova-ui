@@ -1,0 +1,408 @@
+/* =====================================================
+   HERO — Original styles preserved + Full Responsive
+   ===================================================== */
+
+.hero {
+  min-height: 100vh;
+  background: #000D12;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7%;
+  gap: 60px;
+  overflow: hidden;
+}
+
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+}
+
+.hero h1,
+.hero p {
+  margin: 0;
+}
+
+.hero h1 {
+  max-width: 607px;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 500;
+  font-size: clamp(3rem, 6vw, 67px);
+  line-height: 120%;
+  color: white;
+}
+
+.hero p {
+  max-width: 520px;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0;
+  color: #A3B4C2;
+}
+
+.hero-content {
+  max-width: 607px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.primary-btn {
+  min-width: 210px;
+  height: 49px;
+  background: linear-gradient(90deg, #12a8ff, #0f3dff);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 32px;
+  font-family: 'Chivo Mono', monospace;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+}
+
+.secondary-btn {
+  min-width: 208px;
+  height: 49px;
+  background: transparent;
+  color: white;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 15px 59px;
+  font-family: 'Chivo Mono', monospace;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-right::before {
+  content: "";
+  position: absolute;
+  width: 398px;
+  height: 398px;
+  border-radius: 50%;
+  background: linear-gradient(103.43deg, #00B4FD 80%, #003ACE 70.53%);
+  opacity: 0.5;
+  filter: blur(100px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.hero-right img {
+  width: 100%;
+  max-width: 650px;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+}
+
+.trusted-by {
+  max-width: 621px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.trusted-by p {
+  width: 83px;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: #E9F4F9;
+  opacity: 0.7;
+  text-transform: capitalize;
+}
+
+.trusted-logos {
+  max-width: 621px;
+  display: flex;
+  align-items: center;
+  gap: 18.4px;
+  opacity: 0.9;
+  flex-wrap: nowrap;
+}
+
+.hero-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+/* =====================================================
+   RESPONSIVE BREAKPOINTS
+   ===================================================== */
+
+/* ── Large Desktop: 1440px+ ── */
+@media (min-width: 1440px) {
+  .hero {
+    padding: 0 10%;
+  }
+}
+
+/* ── Laptop / Small Desktop: 992px – 1280px ── */
+@media (max-width: 1280px) {
+  .hero {
+    gap: 40px;
+    padding: 0 5%;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 5vw, 56px);
+  }
+
+  .hero-right img {
+    max-width: 520px;
+  }
+}
+
+/* ── Tablet Landscape: 768px – 992px ── */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 6% 80px;
+    min-height: 100vh;
+    gap: 50px;
+  }
+
+  .hero-left {
+    align-items: center;
+    gap: 48px;
+  }
+
+  .hero h1 {
+    margin: 0 auto;
+    font-size: clamp(2.2rem, 5vw, 48px);
+  }
+
+  .hero p {
+    margin: 0 auto;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .trusted-by {
+    align-items: center;
+  }
+
+  .trusted-by p {
+    width: auto;
+  }
+
+  .trusted-logos {
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  .hero-text-wrapper {
+    align-items: center;
+    gap: 40px;
+  }
+
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero-right img {
+    max-width: 480px;
+  }
+
+  .hero-right::before {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* ── Tablet Portrait: 576px – 768px ── */
+@media (max-width: 768px) {
+  .hero {
+    padding: 90px 5% 70px;
+    gap: 40px;
+  }
+
+  .hero-left {
+    gap: 36px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 7vw, 40px);
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    gap: 14px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    min-width: 180px;
+    font-size: 14px;
+    padding: 13px 24px;
+  }
+
+  .secondary-btn {
+    padding: 13px 32px;
+  }
+
+  .hero-right img {
+    max-width: 380px;
+  }
+
+  .hero-right::before {
+    width: 260px;
+    height: 260px;
+    filter: blur(70px);
+  }
+
+  .trusted-logos {
+    gap: 14px;
+  }
+}
+
+/* ── Mobile Large: 480px – 576px ── */
+@media (max-width: 576px) {
+  .hero {
+    padding: 80px 6% 60px;
+    gap: 36px;
+  }
+
+  .hero-left {
+    gap: 28px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.8rem, 8vw, 36px);
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    min-width: unset;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  .hero-right img {
+    max-width: 300px;
+  }
+
+  .hero-right::before {
+    width: 220px;
+    height: 220px;
+    filter: blur(60px);
+  }
+
+  .trusted-logos {
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .hero-text-wrapper {
+    gap: 28px;
+  }
+}
+
+/* ── Mobile Small: below 480px ── */
+@media (max-width: 480px) {
+  .hero {
+    padding: 70px 5% 50px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.6rem, 8.5vw, 30px);
+    line-height: 115%;
+  }
+
+  .hero p {
+    font-size: 13.5px;
+    line-height: 140%;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    height: 46px;
+    font-size: 13px;
+  }
+
+  .hero-right img {
+    max-width: 260px;
+  }
+
+  .hero-right::before {
+    width: 180px;
+    height: 180px;
+    filter: blur(50px);
+  }
+}
+
+/* ── Very Small: below 360px ── */
+@media (max-width: 360px) {
+  .hero {
+    padding: 60px 4% 40px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 13px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    font-size: 12px;
+    height: 44px;
+  }
+}

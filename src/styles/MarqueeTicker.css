@@ -1,0 +1,77 @@
+/* ============================================================
+   MarqueeTicker.css — Infinite scrolling ticker strip
+   ============================================================ */
+
+.ticker {
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #e5e8ed;
+  border-bottom: 1px solid #e5e8ed;
+  overflow: hidden;
+  padding: 18px 0;
+  box-sizing: border-box;
+}
+
+/* The moving track — wide enough to hold all duplicated items */
+.ticker__track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: max-content;
+
+  /* Infinite left scroll animation */
+  animation: ticker-scroll 28s linear infinite;
+}
+
+/* Pause on hover */
+.ticker:hover .ticker__track {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Move exactly half — since we duplicated items, this loops seamlessly */
+    transform: translateX(-50%);
+  }
+}
+
+/* ── Individual items ── */
+.ticker__item {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Star asterisk icon */
+.ticker__star {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+/* Text items */
+.ticker__text {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.ticker__text--blue {
+  color: #1a6ef5;
+}
+
+.ticker__text--dark {
+  color: #111827;
+}
+
+/* Emoji hand */
+.ticker__emoji {
+  font-size: 1.3rem;
+  line-height: 1;
+}

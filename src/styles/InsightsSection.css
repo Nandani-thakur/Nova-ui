@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap');
+
+/* ===========================
+   InsightsSection.css
+   =========================== */
+
+.insights-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: #0a0f1a;
+  padding: 80px 60px;
+  gap: 60px;
+  box-sizing: border-box;
+}
+
+/* ---- LEFT COLUMN ---- */
+.left-col {
+  flex: 0 0 34%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 20px;
+}
+
+.headline {
+  font-family: "IBM Plex Sans", "Helvetica Neue", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.25;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.insights-btn {
+  display: inline-block;
+  width: fit-content;
+  padding: 14px 36px;
+  background: transparent;
+  color: #ffffff;
+  border: 1.5px solid #ffffff;
+  border-radius: 6px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.insights-btn:hover {
+  background: #ffffff;
+  color: #0a0f1a;
+}
+
+/* ---- RIGHT COLUMN ---- */
+.right-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ---- FEATURED CARD ---- */
+.featured-card {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.featured-image-wrapper {
+  flex: 0 0 auto;
+  width: 290px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  box-sizing: border-box;
+}
+
+.featured-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px 32px;
+  gap: 16px;
+}
+
+.featured-title {
+  font-family: "IBM Plex Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* ---- ARTICLE CARDS GRID ---- */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.article-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  background: transparent;
+}
+
+.article-title {
+  font-family: "IBM Plex Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.35;
+  margin: 0;
+}
+
+/* ---- SHARED ---- */
+.category {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: #4a90d9;
+  text-transform: uppercase;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.author,
+.date {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.02em;
+}
+
+.read-more-btn {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  background: transparent;
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.read-more-btn:hover {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ---- ALL INSIGHTS LINK ---- */
+.all-insights {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 4px;
+}
+
+.all-insights-link {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: #4a90d9;
+  text-decoration: none;
+  border-bottom: 1px solid #4a90d9;
+  padding-bottom: 2px;
+  transition: opacity 0.2s ease;
+}
+
+.all-insights-link:hover {
+  opacity: 0.7;
+}
+
+/* ---- LOGO GRID ---- */
+.logo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
+  max-width: 210px;
+}
+
+.logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-item svg {
+  width: 72px;
+  height: 72px;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 1100px) {
+  .insights-section {
+    flex-direction: column;
+    padding: 48px 32px;
+  }
+
+  .left-col {
+    flex: none;
+    width: 100%;
+  }
+
+  .featured-image-wrapper {
+    width: 200px;
+  }
+}
+
+@media (max-width: 700px) {
+  .featured-card {
+    flex-direction: column;
+  }
+
+  .featured-image-wrapper {
+    width: 100%;
+    height: 200px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .headline {
+    font-size: 1.75rem;
+  }
+}
+.featured-card img{
+  width: 291px;
+  height: 261px;
+  padding: 5%;
+}
